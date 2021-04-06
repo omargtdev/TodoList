@@ -1,0 +1,352 @@
+body {
+    background-color: rgb(41, 39, 39);
+    color: #fff;
+    font-family: 'PT Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/*****************************************
+            NAVBAR STYLE
+*******************************************/
+
+nav.navbar {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: rgb(65, 62, 62);
+    text-align: center;
+}
+
+nav.navbar h3  {
+    justify-self: center;
+    margin-left: .5em;
+}
+
+nav.navbar #btn-toogle-menu {
+    display: none;
+}
+
+nav.navbar .navbar-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: 2/13;
+    margin-left: 1em;
+}
+
+nav.navbar .navbar-content ul.nav-items {
+    margin: 0 10px;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    list-style-type: none;
+    grid-column: 1/12;
+}
+
+nav.navbar .navbar-content ul.nav-items li.nav-item {
+    align-self: center;
+    justify-self: start;
+}
+
+nav.navbar .navbar-content ul.nav-items li.nav-item a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*****************************************
+            FORM FILTER STYLE
+*******************************************/
+
+nav.navbar .navbar-content form.filters {
+    justify-self: end;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 1em;
+    align-items: center;
+    font-size: .8em;
+}
+
+nav.navbar .navbar-content form.filters h3 {
+    justify-self: end;
+    margin-right: 1em;
+}
+
+nav.navbar .navbar-content form.filters div.radio-filters{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+nav.navbar .navbar-content form.filters div.radio-filters div.radio-form-group {
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+
+nav.navbar .navbar-content form.filters div.radio-filters div.radio-form-group input {
+    margin-top: 0;
+}
+
+nav.navbar .navbar-content form.filters input[type='text']{
+    margin: 0 .5em;
+}
+
+nav.navbar .navbar-content form.filters button {
+    background: none;
+    color: white;
+    padding: .5em;
+    transition: ease .3s;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+nav.navbar .navbar-content form.filters button:hover {
+    color: rgb(41, 39, 39);
+    background-color: white;
+}
+/*****************************************
+            MAIN STYLE
+*******************************************/
+
+main {
+    padding : 1em;
+}
+
+main > * {
+    width: 80%;
+    margin: auto;
+}
+
+
+/*****************************************
+            FORM-ADD STYLE
+*******************************************/
+
+
+main form.form-add {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr .5fr;
+    padding: 1em;
+}
+
+main form.form-add div.form-add-group input{
+    padding: .4em;
+    font-size: 1em;
+    width: 70%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+main form.form-add div.form-add-group #todoDescription {
+    width: 75%;
+
+}
+
+main form.form-add  button.btn-add {
+    margin-left: -.5em;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    border-radius: 3px;
+    background-color: rgb(32, 52, 233);
+    color : #fff;
+}
+
+main form.form-add  button.btn-add:hover {
+    background-color: rgb(59, 78, 245);
+    transition: ease .3s;
+}
+
+
+/*****************************************
+           TABLE-TASK STYLE
+*******************************************/
+
+
+
+main table{
+    border-collapse: collapse;
+    margin-top: 2em;
+    font-size: .9em;
+}
+
+
+
+main table thead tr th {
+    border-top: 1px solid rgb(204, 204, 204);
+    padding: 15px 10px;
+}
+
+main table tbody tr:nth-child(odd) {
+    background-color: rgb(53, 53, 53);
+}
+
+
+main table tbody tr td {
+    border-top: 1px solid rgb(204, 204, 204);
+    padding: 15px 15px 40px 10px;
+}
+
+
+main table tbody tr td.check-task {
+    text-align: center;
+}
+
+main table tbody tr td.actions-task {
+    text-align: end;
+}
+
+
+main table th.information,
+main table td.information {
+    text-align: start;
+}
+
+main table tbody td.actions-task button {
+    border: none;
+    padding: 1em;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    margin-left: 5px;
+}
+
+main table tbody tr td.actions-task button.btn-edit {
+    background-color: rgb(35, 129, 120);
+
+}
+
+main table tbody tr td.actions-task button.btn-edit:hover {
+    background-color: rgb(47, 168, 156);
+    transition: .3s ease;
+
+}
+
+main table tbody tr td.actions-task button.btn-delete {
+    background-color: rgb(185, 45, 45);
+}
+
+main table tbody tr td.actions-task button.btn-delete:hover {
+    background-color: rgb(228, 49, 49);
+    transition: .3s ease;
+}
+
+/*****************************************
+           EMPTY STYLE
+*******************************************/
+
+main form.form-add div.form-add-group input.empty-input {
+    border: 2px solid rgb(226, 45, 45);
+}
+
+div input.empty-input,
+div textarea.empty-input {
+    border: 2px solid rgb(226, 45, 45);
+}
+
+
+/****************************************
+            MODAL STYLE
+******************************************/
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 500ms ease;
+}
+
+.modal .modal-container {
+    width: 650px;
+    height: auto;
+    margin: auto;
+    background-color: rgb(44, 44, 44);
+    color: #fff;
+    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
+    transform: translateY(-5%);
+}
+
+.modal .modal-container header {
+    background-color: rgb(14, 14, 14);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 10px;
+    padding-right: 0;
+}
+
+.modal .modal-container header span {
+    grid-column: span 11;
+    align-self: center;
+    font-weight: bold;
+}
+
+.modal .modal-container header button.close-modal {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+.modal .modal-container header button.close-modal:hover {
+   color: rgb(131, 131, 131);
+   
+}
+
+/****************************************
+            MODAL FORM EDIT STYLE
+******************************************/
+
+
+
+.modal .modal-container .edit-container form div.form-edit-group {
+    display: grid;
+    margin: 15px;
+    gap : 10px
+}
+
+.modal .modal-container .edit-container form div.form-edit-group:nth-child(3) {
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.modal .modal-container .edit-container form div.form-edit-group input#title-edit {
+    border-radius: 5px;
+    padding: .5em 5px;
+}
+
+.modal .modal-container .edit-container form div.form-edit-group textarea#description-edit {
+    border-radius: 5px;
+    resize: none;
+    padding: 5px;
+    font-family: 'PT Sans', sans-serif;;
+    max-height: 6em;
+}
+
+.modal .modal-container .edit-container form div.form-edit-btn {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin : 0 1em;
+}
+
+.modal .modal-container .edit-container form div.form-edit-btn button.btn-save{
+    margin-left: 1em;
+    margin-bottom: 1em;
+    grid-column: end;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    padding: .5em 1.2em;
+    background-color: rgb(13, 129, 58);
+    color : #fff;
+    cursor: pointer;
+}
+
+.modal .modal-container .edit-container form div.form-edit-btn button.btn-save:hover {
+    background-color: rgb(19, 165, 75);
+    transition: ease .3s;
+}

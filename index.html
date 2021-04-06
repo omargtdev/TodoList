@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TODO List</title>
+    <!-- FONT AWESOME  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/media.css">
+</head>
+<body>
+
+    <!--Navbar -->
+    <nav class="navbar">
+      <h3>JS Todo List</h3>
+      <button id="btn-toogle-menu">
+        <svg height="25px" viewBox="0 -53 384 384" width="25px" xmlns="http://www.w3.org/2000/svg">
+          <path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+        </svg>
+      </button>
+      <div class="navbar-content">
+        <ul class="nav-items">
+          <li class="nav-item"><a href="#">Home</a></li>
+        </ul>
+        <form class="filters">
+          <h3>Filters</h3>
+          <div class="radio-filters">
+            <div class="radio-form-group">
+              <label for="allFilter">All</label>
+              <input type="radio" id="allFilter" name="filter" value="All" checked required>
+            </div>
+            <div class="radio-form-group">
+              <label for="completedFilter">Completed</label>
+              <input type="radio" id="completedFilter" name="filter" value="Completed">
+            </div>
+            <div class="radio-form-group">
+              <label for="uncompletedFilter">Uncompleted</label>
+              <input type="radio" id="uncompletedFilter" name="filter" value="Uncompleted">
+            </div>
+          </div>
+          <input type="text" id="searchFilter" placeholder="Search...">
+          <button type="submit" id="search">Search</button>
+        </form>
+      </div>
+    </nav>
+
+      <main>
+
+          <!--Form Add -->
+
+          <form class="form-add">
+            <div class="form-add-group">
+                <label for="todoTitle">Title:</label>
+                <input type="text" id="todoTitle"/>
+            </div>
+            <div class="form-add-group">
+                <label for="todoDescription">Description:</label>
+                <input type="text" id="todoDescription"/>
+            </div>
+            <button type="submit" class="btn-add" id="add">Add</button>
+          </form>
+          
+
+          <!-- Modal -->
+
+          <table>
+            <thead>
+              <tr>
+                <th class="information">Todo</th>
+                <th class="information">Description</th>
+                <th>Completed</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- TODOS -->
+            </tbody>
+          </table>
+
+      </main>
+      
+      <script src="./js/index.js" type="module"></script>
+</body>
+</html>

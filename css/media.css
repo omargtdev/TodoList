@@ -1,0 +1,117 @@
+@media(max-width : 1100px){
+
+    nav.navbar{
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    nav.navbar h3 {
+        margin-left: .5em;
+        grid-column: 1/12;
+        justify-self: start;
+    }
+
+    nav.navbar #btn-toogle-menu {
+        display: flex;
+        background: none;
+        align-self: center;
+        justify-self: center;
+        border: none;
+        cursor: pointer;
+    }
+
+    nav.navbar #btn-toogle-menu svg path{
+        fill: white;
+    }
+
+    nav.navbar .navbar-content {
+        display: none;
+    }
+
+    nav.navbar .navbar-content.show {
+        display: grid;
+        grid-column: 1/13;
+    }
+
+    nav.navbar .navbar-content.show ul.nav-items{
+        grid-column: 1/13;
+        margin: 5px 0 0 0;
+    }
+
+    nav.navbar .navbar-content.show form.filters {
+        padding-left: 0;
+    }
+    
+    nav.navbar .navbar-content.show form.filters h3{
+        justify-self: start;
+        margin-left: 0;
+        grid-column: 1/13;
+    }
+
+    nav.navbar .navbar-content.show form.filters div.radio-filters{
+        grid-template-columns: repeat(4, 1fr);
+        grid-column: 1/13;
+        margin-bottom: 10px;
+        
+    }
+
+    nav.navbar .navbar-content.show form.filters input[type='text'] {
+        width: 250px;
+        margin: 0;
+        grid-column: 1/13;
+        margin-bottom: 15px;
+    }
+    
+}
+
+@media(max-width : 1060px){
+
+    main  >  * {
+        width: 100%;
+        margin: auto;
+        
+    }
+
+    main form.form-add button.btn-add{
+        margin-right: 1em;
+    }
+}
+
+@media(max-width : 860px){
+
+    main form.form-add{
+        width: 90%;
+    }
+
+    main form.form-add div.form-add-group{
+        display: grid;
+    }
+
+    main form.form-add button.btn-add{
+        margin-left: -2em;
+        margin-top: 1em;
+    }
+
+}
+
+@media(max-width : 470px){
+    main table {
+        font-size: .8em;
+    }
+    main table tbody td.actions-task button {
+        padding: .6em;
+
+    }
+
+    main table tbody tr td.actions-task button.btn-edit{
+        margin-bottom: .5em;
+    }
+
+    main table tbody tr td.actions-task button.btn-delete{
+        padding-left: .7em;
+
+    }
+
+    main table tbody tr td.actions-task button.btn-delete{
+        margin-right: .2em;
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "jstodolist",
+  "version": "1.0.0",
+  "description": "my first CRUD with js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mipapichulo/TodoList.git"
+  },
+  "author": "mipapichulo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mipapichulo/TodoList/issues"
+  },
+  "homepage": "https://github.com/mipapichulo/TodoList#readme"
+}
